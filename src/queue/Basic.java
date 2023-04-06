@@ -1,14 +1,12 @@
-package codingtest;
+package queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Queue_training {
-	
-	
+public class Basic {
+
 	public static void main(String[] args) {
-		
-		
+		// TODO Auto-generated method stub
 		Queue<String> que = new LinkedList<String>();
 		// 값 추가
 		que.add("1");
@@ -27,5 +25,5 @@ public class Queue_training {
 		que.remove("6"); // 해당하는 값 삭제
 		System.out.print(que); // 결과 출력
 	}
-	
+
 }

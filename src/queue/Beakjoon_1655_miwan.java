@@ -21,10 +21,7 @@ public class Beakjoon_1655_miwan {
 			if(i == 0) min_queue.add(request);
 			else {
 				max_queue.add(request);
-								
 			}
-							
-			
 			
 			System.out.println(min_queue.peek());
 		}
