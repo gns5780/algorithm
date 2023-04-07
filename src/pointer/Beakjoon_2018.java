@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Beakjoon_2018 {
 	
 	public static void main(String[] args) throws Exception{
-		
+		//투포인터
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
