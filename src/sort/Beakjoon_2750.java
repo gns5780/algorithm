@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Beakjoon_2750 {
 
 	public static void main(String[] args) throws Exception{
+		//bubble_sort
+		//시간 복잡도 O n제곱
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		
