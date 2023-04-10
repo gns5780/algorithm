@@ -3,7 +3,7 @@ package bfs;
 import java.util.Scanner;
 import java.util.LinkedList;
 import java.util.Queue;
-public class Beakjoon_2178_re_miwansung {
+public class Beakjoon_2178_re {
 	
 	static int n;
 	static int m;

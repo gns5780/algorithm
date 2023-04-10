@@ -32,61 +32,41 @@ public class Beakjoon_1926_miwan {
 		for(int i=0;i<N;i++) {
 			for(int j=0;j<M;j++) {
 				if(arr[i][j] == 1 && arr_check[i][j] != true){
-					cnt ++;
+					cnt++;
 					arr_check[i][j] = true;
 					bfs(i,j);
 					
 				}
 			}
 		}
+		System.out.println(cnt);
 		
-		
-		
-		
-		
-		
-		/*
-		Queue<String> que = new LinkedList<String>();
-		// 값 추가
-		que.add("1");
-		que.add("2");
-		que.add("3");
-		que.add("4");
-		que.add("6");
-		que.add("5");
-		que.add("6");
-		que.poll(); // 맨 앞의 값 삭제
-		System.out.print(que); // 결과 출력
-		
-		que.remove(); // 맨 앞의 값 삭제
-		System.out.print(que); // 결과 출력
-		
-		que.remove("6"); // 해당하는 값 삭제
-		System.out.print(que); // 결과 출력
-		*/
 	}
 	public static void bfs(int x, int y) {
-		System.out.println(N);
-		System.out.println(M);
 		
-		Queue<Integer[]> que = new LinkedList<Integer[]>();
+		Queue<int[]> queue = new LinkedList<>();
 		//que.add(1,2);
 		
 		int[] xm = {1,0,-1,0};
 		int[] ym = {0,1,0,-1};
 		int remember_x = 0;
 		int remember_y = 0;
-		
-		for(int i=0;i<4;i++) {
-			remember_x = x + xm[i];
-			remember_y = y + ym[i];
-			if(x > 0 && y > 0 && x < N && y < M) {
-				if(arr[remember_x][remember_y] == 1) {
-					//que_x.add(remember_x);
-					//que_y.add(remember_y);					
+		while(!queue.isEmpty()) {
+			x = queue.peek()[0];
+			y = queue.peek()[1];
+			queue.poll();
+			for(int i=0;i<4;i++) {
+				remember_x = x + xm[i];
+				remember_y = y + ym[i];
+				if(x > 0 && y > 0 && x < N && y < M) {
+					if(arr[remember_x][remember_y] == 1 && arr_check[remember_x][remember_y] == false) {
+						arr_check[remember_x][remember_y] = true;
+						queue.add(new int[] {remember_x,remember_y});
+					}
 				}
-			}
+			}			
 		}
+		
 		
 		
 		
