@@ -16,5 +16,7 @@ public class Beakjoon_11726 {
 		}
 		System.out.println(d[n]);
 	}
-
+	
 }
+
+
