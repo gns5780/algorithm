@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Beakjoon_12891_miwansung_14m_27s {
+public class Beakjoon_12891_miwansung {
 	
 	static int myarr[];
 	static int checkarr[];
@@ -35,10 +35,38 @@ public class Beakjoon_12891_miwansung_14m_27s {
 		
 		for(int i=0;i<p;i++) {
 			ADD(a[i]);
+			
+			
+		}
+		if(checksecret == 4 ) result++;
+		
+		for(int i=p; i<s; i++) {
+			int j = i-p;
+			ADD(a[i]);
+			Remove(a[j]);
+			if(checksecret == 4 ) result++;
 		}
 		
+		System.out.println(result);
 	}
 	
+	private static void Remove(char c) {
+		switch(c) {
+		case 'A':
+			myarr[0]--;
+			if(myarr[0] == checkarr[0]) checksecret--;
+		case 'C':
+			myarr[1]--;
+			if(myarr[1] == checkarr[1]) checksecret--;
+		case 'G':
+			myarr[2]--;
+			if(myarr[2] == checkarr[2]) checksecret--;
+		case 'T':
+			myarr[3]--;
+			if(myarr[3] == checkarr[3]) checksecret--;
+	}
+	}
+
 	private static void ADD(char c) {
 		switch(c) {
 			case 'A':
@@ -55,5 +83,5 @@ public class Beakjoon_12891_miwansung_14m_27s {
 				if(myarr[3] == checkarr[3]) checksecret++;
 		}
 	}
-
+	
 }
