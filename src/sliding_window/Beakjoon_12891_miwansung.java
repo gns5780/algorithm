@@ -44,7 +44,7 @@ public class Beakjoon_12891_miwansung {
 			int j = i-p;
 			ADD(a[i]);
 			Remove(a[j]);
-			if(checksecret == 4 ) result++;
+			if(checksecret == 4) result++;
 		}
 		
 		System.out.println(result);
@@ -53,18 +53,18 @@ public class Beakjoon_12891_miwansung {
 	private static void Remove(char c) {
 		switch(c) {
 		case 'A':
-			myarr[0]--;
 			if(myarr[0] == checkarr[0]) checksecret--;
+			myarr[0]--;
 		case 'C':
-			myarr[1]--;
 			if(myarr[1] == checkarr[1]) checksecret--;
+			myarr[1]--;
 		case 'G':
-			myarr[2]--;
 			if(myarr[2] == checkarr[2]) checksecret--;
+			myarr[2]--;
 		case 'T':
-			myarr[3]--;
 			if(myarr[3] == checkarr[3]) checksecret--;
-	}
+			myarr[3]--;
+		}
 	}
 
 	private static void ADD(char c) {
